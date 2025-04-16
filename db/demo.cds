@@ -11,7 +11,7 @@ context demo {
         CLASS: Association to one standard;
         GENDER: String(1);
         CITY: String(10);
-    }    
+    }      
 
     entity Books {
         key ID: common.Guid;

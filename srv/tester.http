@@ -1,0 +1,48 @@
+###Post an employee
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+{
+    "nameFirst": "Ayush",
+    "nameMiddle": "",
+    "nameLast": "sethi",
+    "nameInitials": null,
+    "sex": "M"
+}
+
+###Get an employee
+GET http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+
+###POST a PO
+POST http://localhost:4004/odata/v4/CatalogService/POs
+Content-Type: application/json
+
+{
+    "NODE_KEY": "748627AD200E41EDBASD8",
+    "PO_ID": "0000000009",
+    "LIFECYCLE_STATUS": "L",
+    "OVERALL_STATUS": "C"
+}
+
+###Patch PO
+
+PATCH http://localhost:4004/odata/v4/CatalogService/POs/748627AD200E41EDBASD8
+Content-Type: application/json
+
+{
+    "GROSS_AMOUNT": 22000
+}
+
+###get po
+GET http://localhost:4004/odata/v4/CatalogService/POs
+
+###calling an action
+POST http://localhost:4004/odata/v4/CatalogService/POs/748627AD200E41EDBASD8/boost
+Content-Type: application/json
+
+{}
+
+###Get largest gross po
+GET http://localhost:4004/odata/v4/CatalogService/POs/748627AD200E41EDBASD8/largestOrder()
+
+
